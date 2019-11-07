@@ -1,23 +1,7 @@
 import java.util.*;
 
 public class LeeCode {
-    public int largestPerimeter(int[] A) {
-        if(A.length<3){
-            return 0;
-        }
-        int n = A.length-1;
-        int x = A[n];
-        int y = A[n-1];
-      while(n-2>=0){
-          int z = A[n];
-          if(x+y>z){
-              return x+y+z;
-          }else{
-              n--;
-          }
-      }
-      return 0;
-    }
+ 
     public int[][] kClosests(int[][] points, int K) {
         PriorityQueue<int []> queue= new PriorityQueue<int []>(
                 (o1, o2) -> {
